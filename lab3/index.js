@@ -17,11 +17,11 @@ function inputVariables() {
     let variable_a = prompt('Podaj zmienną a: ');
     let variable_b = prompt('Podaj zmienna b: ')
     window.alert(+variable_a + +variable_b)
-}:
-
-fuction currentTime() {
-    var today = new Date();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    window.document(time)
-
 }
+
+function currentTime() {
+    var today = Date();
+    documet.write(today)
+    setTimeout(currentTime, 1000)
+}
+

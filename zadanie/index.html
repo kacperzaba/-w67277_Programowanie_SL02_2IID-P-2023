@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+ </head>
+
+<body>
+  <header>
+    <div>
+      <div>
+        <h2>Jan Kowalski</h2>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li class="options">
+          <a href="./index.html" >Strona główna</a>
+        </li>
+        <li><a href="./seriale/index.html">Ulubione seriale</a></li>
+        <li><a href="./ksiazki/index.html">Ulubione książki</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div>
+        <h1>
+          <span>Jan Kowalski</span> strona personalna
+        </h1>
+
+        <span>Cześć! Jestem Janek i
+          <span>lubię programować</span></span>
+      </div>
+
+    </section>
+    <article class="article_element">
+      <h4>Kilka słów o mnie</h4>
+
+      <p>
+        Jestem absolwentem <b>Liceum Ogólnokształcącego w Rzeszowie</b>, które
+        ukończyłem z <i>wyróżnieniem. </i>
+        W wolnych chwilach lubie czytać książki kryminalne. Lubię podróżować
+        po górach i nawiązywać nowe znajomości.
+      </p>
+    </article>
+
+    <!-- ZADANIE 2 -->
+    <!-- Proszę skierować studentów na stronę:
+    https://devdocs.io/html/element/ul
+    tam znajduje się przykład zagnieżdżania list-->
+    <article class="article_element">
+      <h4>Moje ulubione seriale</h4>
+      <ul>
+        <li>Gra o tron</li>
+        <li>Moda na sukces</li>
+        <li>Sanatorium miłości</li>
+      </ul>
+    </article>
+
+    <article class="article_element">
+      <h4>
+        Ranking najlepszych powieści kryminalnych
+      </h4>
+      <ol>
+        <li>Projekt Riese.</li>
+        <li>Zło kryje się w mroku.</li>
+        <li>Zemsta.</li>
+      </ol>
+    </article>
+
+    <!-- ZADANIE 3 -->
+    <article class="article_element">
+      <h4>Moje ulubione seriale</h4>
+      <ul>
+        <li>
+          Gra o tron
+          <a href="https://www.filmweb.pl/serial/Gra+o+tron-2011-476848">Gra o tron</a>
+        </li>
+        <li>
+          Moda na sukces
+          <a href="https://www.filmweb.pl/serial/Moda+na+sukces-1987-94193">
+            Moda na sukces</a>
+        </li>
+        <li>
+          Sanatorium miłości<a href="https://vod.tvp.pl/programy,88/sanatorium-milosci-odcinki,286735">
+            Sanatorium miłości</a>
+        </li>
+      </ul>
+    </article>
+
+    <!-- ZADANIE 4 -->
+    <!-- Pytanie do studentów: Jak sprawić aby tablica posiadała ramki?-->
+    <article class="article_element">
+      <h4>Moje ścieżka nauki</h4>
+
+      <table>
+        <tr>
+          <th>Data</th>
+          <th>Szkoła</th>
+        </tr>
+        <tr>
+          <td>2011 - obecnie</td>
+          <td>WSIZ</td>
+        </tr>
+        <tr>
+          <td>2008 - 2011</td>
+          <td>Liceum ogólnokształcące nr...</td>
+        </tr>
+        <tr>
+          <td>2002 - 2008</td>
+          <td>Szkoła podstawowa nr...</td>
+        </tr>
+      </table>
+    </article>
+
+    <!--    ZADANIE 4.1 -->
+    <article class="article_element">
+      <h4>Pusta tabelka</h4>
+      <table>
+        <tr>
+          <td></td>
+          <td rowspan="2"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+
+          <td rowspan="2" colspan="2"></td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+          <td></td>
+        </tr>
+      </table>
+    </article>
+    <!-- ZADANIE 5 -->
+    <article class="article_element">
+      <div>
+        <h4>Moje ulubione seriale</h4>
+
+        <ul>
+          <li>
+            Gra o tron
+            <a href="https://www.filmweb.pl/serial/Gra+o+tron-2011-476848">Gra o tron</a>
+          </li>
+          <li>
+            Moda na sukces
+            <a href="https://www.filmweb.pl/serial/Moda+na+sukces-1987-94193">
+              Moda na sukces</a>
+          </li>
+          <li>
+            Sanatorium miłości<a href="https://vod.tvp.pl/programy,88/sanatorium-milosci-odcinki,286735">
+              Sanatorium miłości</a>
+          </li>
+        </ul>
+      </div>
+      <img
+        src="https://i0.wp.com/mobirank.pl/wp-content/uploads/2020/03/moda-na-sukces-serial-1024x591-1.jpg?w=1024&ssl=1"
+        height="200" />
+    </article>
+  </main>
+
+  <article class="article_element">
+    <h4>Moje ulubione seriale</h4>
+    <div>
+      <!-- ZADANIE 8 -->
+
+      <h4>Your news form</h4>
+      <form action="." method="post">
+        <div>
+          <label>Name: </label>
+          <input type="text" required />
+        </div>
+        <div>
+          <label>Email: </label>
+          <input type="email" required />
+        </div>
+        <div>
+          <label>Do you want to get news daily? </label>
+          <input type="checkbox" checked />
+        </div>
+        <div>
+          <label>Do you want to get 10% dicount? </label>
+          <input type="radio" />
+        </div>
+        <div>
+          <label>Select first news day</label>
+          <input type="date" requiredq />
+        </div>
+        <div>
+          <input type="submit" value="Subscribe!" />
+        </div>
+      </form>
+    </div>
+    <aside>Menu boczne</aside>
+  </article>
+
+  <footer>© 2007-2014 JanKowalski.pl</footer>
+  <hr />
+  <hr />
+</body>
+
+</html>

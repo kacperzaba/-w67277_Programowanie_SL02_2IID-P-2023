@@ -1,0 +1,65 @@
+body {
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 50px
+}
+h4 {
+    font-size: 30px;
+}
+* {
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    width: 100%;
+    background-color:lightgray;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px 2px #aaa;
+    padding: 20px 0 ;
+    z-index: 100;
+}
+.options a {
+    color: green;
+    font-size: 20px;
+}
+ul {
+    display:flex;
+    list-style-type: none;
+    gap: 20px;
+}
+h2 {
+    color:blueviolet;
+}
+article, section {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+    font-size: 20px;
+}
+article {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: baseline;
+    padding: 150px 120px;
+    gap: 20px;
+}
+.article_element {
+    width: 50%;
+}
+footer {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: darkgreen;
+}

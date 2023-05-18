@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab_6</title>
+    <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .element {
+      display: block; /* lub none, aby ukryć element na początku */
+    }
+    .button {
+        background-color: royalblue;
+        }
+
+            /* ZAD 4 */
+    #tabela {
+        width: 300px;
+        padding: 20px;
+        background-color: lightblue;
+        border-radius: 20px;
+        border-collapse: collapse;
+        width: 100%;
+        justify-content: center;
+          }
+    
+    th,
+    td {
+        text-align: center;
+        padding: 8px;
+        border: 1px solid black;
+        }
+    
+    th {
+        background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <button type="submit" >przycisk</button>
+    <button type="submit" >przycisk 2</button>
+    <button type="submit" >przycisk 3</button>
+    <br>
+
+
+    <button onclick="toggleVisibility()">Zmień widoczność</button>
+
+    <div id="myElement" class="element">
+      Ten element może być ukryty lub pokazany.
+    </div>
+
+
+    <br>
+    <input type="text" id="textInput">
+    <button onclick="addToList()">Dodaj do listy</button>
+    <ul id="myList"></ul>
+
+
+    <table id="tabela">
+        <caption>
+          Dodaj Imię i Nazwisko do tabeli
+        </caption>
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" /><br /><br />
+        <label for="nazwisko">Nazwisko:</label>
+        <input type="text" id="nazwisko" name="nazwisko" /><br /><br />
+        <button onclick="dodajDoTabeli()">Dodaj do tabeli</button>
+        <br /><br />
+        <tbody id="tabela" ></tbody>
+        <tr>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+        </tr>
+      </table>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

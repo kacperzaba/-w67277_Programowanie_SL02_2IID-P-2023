@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="pl">
+    
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            /* ZAD 1 */
+             .button {
+            background-color:   royalblue;
+            justify-content: start;
+            align-items: center;
+          }
+            /* ZAD 2 */
+            body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+            }
+    
+            form {
+                width: 300px;
+                padding: 20px;
+                background-color: #f5f5f5;
+                border-radius: 20px;
+            }
+    
+            .control {
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .actions {
+                justify-content: center;
+            }
+    
+            .error {
+                color: #F00
+            }
+    
+            .contactAddress input, .province input, .province select {
+                width: 100%;
+            }
+            /* ZAD 4 */
+            #tabela {
+            width: 300px;
+            padding: 20px;
+            background-color: lightblue;
+            border-radius: 20px;
+            border-collapse: collapse;
+            width: 100%;
+            justify-content: center;
+          }
+    
+          th,
+          td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid black;
+          }
+    
+          th {
+            background-color: #f2f2f2;
+          }
+        </style>
+    
+    <script type="text/javascript" defer src="tabela.js">
+    </script>
+    </head>
+    
+    <body>
+         <!-- zadanie 1 -->
+         <button>click</button>
+         <button>click</button>
+         <button>click</button>
+         <!-- ZADANIE 2 -->
+        <form class="form" name="form" method="post" novalidate>
+            <div class="control">
+                <label>Imie</label>
+                <input type="text" name="name">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Nazwisko </label>
+                <input type="text" name="surname">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Email: </label>
+                <input type="text" name="email">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Hasło: </label>
+                <input type="password" name="password">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Potwórz Hasło: </label>
+                <input type="password" name="confirm-password">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Płeć:</label>
+                <div>
+                    <input type="radio" id="m" name="sex" value="m">
+                    <label for="m">M</label>
+                    <input type="radio" id="k" name="sex" value="k">
+                    <label for="k">K</label>
+                </div>
+                <span class="sex error"></span>
+            </div>
+            <div class="control">
+                <label>Telefon: </label>
+                <input type="text" name="phone">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Data urodzenia: </label>
+                <input type="date" name="birthDate">
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Kraj: </label>
+                <select name="country">
+                    <option></option>
+                    <option value="Polska">Polska</option>
+                    <option value="Ukraina">Ukraina</option>
+                    <option value="Litwa">Litwa</option>
+                    <option value="Niemcy">Niemcy</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div class="province">
+                <label>Województwo: </label>
+                <input type="text" disabled name="province">
+                <span class="error"></span>
+            </div>
+            <div class="province select" hidden>
+                <label>Województwo: </label>
+                <select name="province" disabled>
+                    <option></option>
+                    <option value="Podkarpacie">Podkarpacie</option>
+                    <option value="Małopolska">Małopolska</option>
+                    <option value="Mazowsze">Mazowsze</option>
+                    <option value="Wielkopolska">Wielkopolska</option>
+                </select>
+                <span class="error"></span>
+            </div>
+            <div class="control">
+                <label>Adres zamieszkania: </label>
+                <input type="text" disabled name="address">
+                <span class="error"></span>
+            </div>
+            <div>
+                <input type="checkbox" checked name="hasSameContactAddress">
+                <label>Adres korespodencyjny taki sam jak zamieszkania </label>
+            </div>
+            <div class="contactAddress" hidden>
+                <label>Adres korespodencyjny: </label>
+                <input type="text" disabled name="contactAddress">
+                <span class="error"></span>
+            </div>
+    
+            <div class="control actions">
+                <input type="submit" value="Zapisz">
+            </div>
+        
+    <!-- zadanie 4 -->
+    <table id="tabela">
+        <caption>
+          Dodaj Imię i Nazwisko do tabeli
+        </caption>
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie" /><br /><br />
+        <label for="nazwisko">Nazwisko:</label>
+        <input type="text" id="nazwisko" name="nazwisko" /><br /><br />
+        <button onclick="dodajDoTabeli()">Dodaj do tabeli</button>
+        <br /><br />
+        <tbody id="tabela" ></tbody>
+        <tr>
+          <th>Imię</th>
+          <th>Nazwisko</th>
+        </tr>
+      </table>
+    </form>
+        <script type="text/javascript" defer src="tabela.js">
+        </script>
+    </body>
+    
+    </html>
+    <script src="main.js"></script>
+</body>
+</html>
